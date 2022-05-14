@@ -88,6 +88,11 @@ a:hover {
   text-align: left;
 }
 
+.my-works-img {
+  width: 20%;
+  padding: 0 40px 0;
+}
+
 .intro {
   width: 30%;
   margin: auto;
