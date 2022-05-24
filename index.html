@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Ozgur Yavuz</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.ico">
+
+</head>
+
+<body>
+
+    <header>
+        <a href="#"><img src="images/logo.png" alt="" style="width: 25%;"></a>
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#profile">About</a></li>
+            <li><a href="#">Work</a></li>
+            <li><a href="#contact-me">Contact</a></li>
+        </ul>
+    </header>
+
+    <section>
+        <img src="images/stars.png" id="stars">
+        <img src="images/moon.png" id="moon">
+        <img src="images/mountains_behind.png" id="mountains_behind">
+        <h2 id="text">Ozgur Yavuz</h2>
+        <a href="#sec" id="btn">Explore</a>
+        <img src="images/mountains_front.png" id="mountains_front">
+    </section>
+
+    <div class="sec" id="sec">
+        <div class="middle-container">
+            <div class="profile" id="profile">
+              <img id="ozgur-png" src="images/ozgur.png" alt="">
+              <h2>Hello.</h2>
+              <p class="intro">I am an Web Designer & Developer. I'm also studying Computer Science at Ozyegin University. I am experienced webmaster.</p>
+            </div>
+            <hr>
+            <div class="skills">
+              <h2>My Skills.</h2>
+              <div class="skill-row">
+                <img class="coding-gif" src="images/coding.gif" alt="">
+                <h3>Design & Development</h3>
+                <p>I started learning to code when I was 18 years old because I wanted to make my own video game. During this period, I have gained a wealth of experience designing and developing mobile and web applications.</p>
+              </div>
+              <div class="skill-row">
+                <img class="experience-gif" src="images/experience.gif" alt="">
+                <h3>My Experiences</h3>
+                <p>So far, I have designed and managed websites for various organizations. Below you can find the websites I still manage. Check out my previous work.</p>
+              </div>
+            </div>
+            <hr>
+            <div class="contact-me" id="contact-me">
+              <h2>Get In Touch</h2>
+              <h3>If my work interests you.</h3>
+              <p class="contact-message">If you like my work and want to work with me, click the button below and let's work together to realize your dream website design.</p>
+              <a class="btn" href="mailto:ozguryavuz.oty@gmail.com">CONTACT ME</a>
+            </div>
+          </div>
+    </div>
+
+    <script>
+        let stars = document.getElementById('stars');
+        let moon = document.getElementById('moon');
+        let mountains_behind = document.getElementById('mountains_behind');
+        let text = document.getElementById('text');
+        let btn = document.getElementById('btn');
+        let mountains_front = document.getElementById('mountains_front');
+        let header = document.querySelector('header');
+
+        window.addEventListener('scroll', function() {
+            let value = window.scrollY;
+            stars.style.left = value * 0.25 + 'px';
+            moon.style.top = value * 0.70 + 'px';
+            mountains_behind.style.top = value * 0.3 + 'px';
+            mountains_front.style.top = value * 0 + 'px';
+            text.style.marginRight = value * 4 + 'px';
+            text.style.marginTop = value * 1.5 + 'px';
+            btn.style.marginTop = value * 1.5 + 'px';
+            header.style.top = value * 0.5 + 'px';
+        })
+    </script>
+
+</body>
+
+</html>
